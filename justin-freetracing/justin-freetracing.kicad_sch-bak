@@ -5024,7 +5024,7 @@
   (symbol (lib_id "FPGA_Lattice:ICE40UL1K-SWG16") (at 114.3 163.576 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c6e2f247-9f07-4f80-92a6-e59059de4803)
-    (property "Reference" "U2" (id 0) (at 121.3994 186.69 0)
+    (property "Reference" "U?" (id 0) (at 121.3994 186.69 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "ICE40UL1K-SWG16" (id 1) (at 121.3994 189.23 0)
@@ -5910,7 +5910,7 @@
       (reference "U1") (unit 1) (value "ATmega1284-P") (footprint "Package_DIP:DIP-40_W15.24mm_Socket")
     )
     (path "/c6e2f247-9f07-4f80-92a6-e59059de4803"
-      (reference "U2") (unit 1) (value "ICE40UL1K-SWG16") (footprint "Package_CSP:WLCSP-16_1.409x1.409mm_P0.35mm")
+      (reference "U?") (unit 1) (value "ICE40UL1K-SWG16") (footprint "Package_CSP:WLCSP-16_1.409x1.409mm_P0.35mm")
     )
     (path "/c089cf11-2967-4bab-a0c6-d3e8d4d5795b"
       (reference "Y1") (unit 1) (value "20MHz") (footprint "Crystal:Crystal_HC49-U_Vertical")

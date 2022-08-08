@@ -1,0 +1,9 @@
+#ifndef tools_h
+#define tools_h
+
+#define GET_FLAG(FLAG, REGISTER) REGISTER & FLAG
+#define NGET_FLAG(FLAG, REGISTER) ~REGISTER & FLAG
+#define SET_FLAG(FLAG, REGISTER) REGISTER |= FLAG
+#define UNSET_FLAG(FLAG, REGISTER) REGISTER &= ~FLAG
+
+#endif

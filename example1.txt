@@ -1,0 +1,69 @@
+➜  avrcpu git:(main) ✗ avrdude -c avrisp -b 19200 -p m1284p -U lfuse:w:0xE3:m -v -V -P /dev/cu.usbmodem111201
+
+avrdude: Version 7.0
+         Copyright (c) Brian Dean, http://www.bdmicro.com/
+         Copyright (c) Joerg Wunsch
+
+         System wide configuration file is "/opt/homebrew/Cellar/avrdude/7.0/bin/../etc/avrdude.conf"
+         User configuration file is "/Users/justinbaum/.avrduderc"
+         User configuration file does not exist or is not a regular file, skipping
+
+         Using Port                    : /dev/cu.usbmodem111201
+         Using Programmer              : avrisp
+         Overriding Baud Rate          : 19200
+         AVR Part                      : ATmega1284P
+         Chip Erase delay              : 55000 us
+         PAGEL                         : PD7
+         BS2                           : PA0
+         RESET disposition             : dedicated
+         RETRY pulse                   : SCK
+         Serial program mode           : yes
+         Parallel program mode         : yes
+         Timeout                       : 200
+         StabDelay                     : 100
+         CmdexeDelay                   : 25
+         SyncLoops                     : 32
+         PollIndex                     : 3
+         PollValue                     : 0x53
+         Memory Detail                 :
+
+                                           Block Poll               Page                       Polled
+           Memory Type Alias    Mode Delay Size  Indx Paged  Size   Size #Pages MinW  MaxW   ReadBack
+           ----------- -------- ---- ----- ----- ---- ------ ------ ---- ------ ----- ----- ---------
+           eeprom                 65    10   128    0 no       4096    8      0  9000  9000 0xff 0xff
+           flash                  65    10   256    0 yes    131072  256    512  4500  4500 0xff 0xff
+           lock                    0     0     0    0 no          1    1      0  9000  9000 0x00 0x00
+           lfuse                   0     0     0    0 no          1    1      0  9000  9000 0x00 0x00
+           hfuse                   0     0     0    0 no          1    1      0  9000  9000 0x00 0x00
+           efuse                   0     0     0    0 no          1    1      0  9000  9000 0x00 0x00
+           signature               0     0     0    0 no          3    1      0     0     0 0x00 0x00
+           calibration             0     0     0    0 no          1    1      0     0     0 0x00 0x00
+
+         Programmer Type : STK500
+         Description     : Atmel AVR ISP
+         Hardware Version: 2
+         Firmware Version: 1.18
+         Topcard         : Unknown
+         Vtarget         : 0.0 V
+         Varef           : 0.0 V
+         Oscillator      : Off
+         SCK period      : 0.1 us
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9705 (probably m1284p)
+avrdude: reading input file "0xE3"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xE3:
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: 1 bytes of lfuse verified
+
+avrdude done.  Thank you.
