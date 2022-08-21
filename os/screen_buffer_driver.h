@@ -17,5 +17,8 @@ const uint8_t SB_FLAG_RESERVED7;
 
 void clear_screen(void);
 void output_video_ram(void);
+void output_line(char[]);
+void output_line_flash(const __flash char *);
+void scroll_line(void);
 
 #endif
