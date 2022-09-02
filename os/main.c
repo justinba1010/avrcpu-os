@@ -11,14 +11,10 @@ static const __flash char __string_booting[] = "Booting...";
 static const __flash char __copyright[] = "Baumputer (c) 2022 ... 16 KB Memory";
 static const __flash char __programs[] = "Programs loaded: Basic, TicTacToe";
 static const __flash char __which_program[] = "Enter program name: ";
+static const __flash char __exit[] = "Enter \"exit\" to exit";
 
-void setup(void) {
-  // Configure ISR Interrupt
-  screen_setup();
-  keyboard_setup();
-  master_lights_setup();
-  configure_interrupt();
-}
+void configure_interrupt(void);
+void setup(void);
 
 static inline void boot(void) {
   setup();
@@ -36,7 +32,9 @@ void main(void) {
   char buffer[80] = {'\0'};
   while (true) {
     output_line_flash(__which_program);
-    output_line("Enter \"exit\" to exit");
+    scroll_line();
+    output_line_flash(__exit);
+    scroll_line();
     keyboard_wait_for_line(buffer, 80);
     if (strcmp(buffer, "TicTacToe") == 0) {
       // Tic Tac Toe
@@ -56,4 +54,20 @@ ISR(TIMER1_OVF_vect, ISR_BLOCK) {
   increment_master_lights();
 }
 
-void configure_interrupt(void) {}
+void setup(void) {
+  // Configure ISR Interrupt
+  screen_setup();
+  keyboard_setup();
+  master_lights_setup();
+  configure_interrupt();
+}
+
+void configure_interrupt(void) {
+  // Enable Interrupt
+  TIMSK0 = (1 << TOIE0);
+  // No wave generator
+  TCCR0A = 0x0;
+  // 1024 Prescaler
+  TCCR0B = (1 << CS02) | (1 << CS00);
+  // 76 Hz
+}

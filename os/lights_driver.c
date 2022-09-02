@@ -8,4 +8,9 @@ static uint8_t counter = 0;
 
 void increment_master_lights(void) { PORTA = ++counter; }
 
-void master_lights_setup(void) { DDRA = 0x0b11000000; }
+void master_lights_setup(void) { DDRA = 0b11000000; }
+
+uint8_t random(uint8_t count) {
+  // LCG of Garbage Quality
+  return (7 * counter++) + 251 % count;
+}

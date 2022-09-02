@@ -2,7 +2,7 @@ include config.mk
 
 F_CPU_DEF=-DF_CPU=$(FCPU)
 CC = avr-gcc
-CFLAGS = -I. -mmcu=$(MCUNAME) $(OPTIMIZATION) -Wall -std=gnu99 -Wno-main
+CFLAGS = -I. -mmcu=$(MCUNAME) $(OPTIMIZATION) -Wall -std=gnu99 -Wno-main -Wno-unused-variable
 ASSEMBLY =
 
 SRCS = keyboard_driver.c screen_buffer_driver.c lights_driver.c tictactoe.c

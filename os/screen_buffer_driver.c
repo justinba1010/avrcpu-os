@@ -4,14 +4,6 @@
 #include "screen_buffer_driver.h"
 #include "tools.h"
 
-#define SCREEN_WIDTH 80
-#define SCREEN_HEIGHT 25
-#define SYNC_DELAY 25
-#define GET_SBFLAG(FLAG) GET_FLAG(FLAG, screen_buffer_status)
-#define NGET_SBFLAG(FLAG) NGET_FLAG(FLAG, screen_buffer_status)
-#define SET_SBFLAG(FLAG) SET_FLAG(FLAG, screen_buffer_status)
-#define UNSET_SBFLAG(FLAG) UNSET_FLAG(FLAG, screen_buffer_status)
-
 static uint8_t screen_buffer[SCREEN_HEIGHT][SCREEN_WIDTH];
 
 static uint8_t current_line = 22;
@@ -103,4 +95,7 @@ void output_line_flash(const char __flash *line) {
   }
 }
 
-void scroll_line(void) { current_line = current_line++ % SCREEN_HEIGHT; }
+void scroll_line(void) {
+  current_line++;
+  current_line %= SCREEN_HEIGHT;
+}

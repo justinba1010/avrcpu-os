@@ -3,15 +3,6 @@
 
 #include "keyboard_driver.h"
 #include "tools.h"
-#define KEYBOARD_BUFFER_LENGTH 64
-#define GET_KFLAG(FLAG) GET_FLAG(FLAG, keyboard_status)
-#define NGET_KFLAG(FLAG) NGET_FLAG(FLAG, keyboard_status)
-#define SET_KFLAG(FLAG) SET_FLAG(FLAG, keyboard_status)
-#define UNSET_KFLAG(FLAG) UNSET_FLAG(FLAG, keyboard_status)
-static char keyboard_buffer[KEYBOARD_BUFFER_LENGTH];
-static uint8_t keyboard_buffer_index;
-static uint8_t keyboard_status;
-
 const uint8_t K_FLAG_BUFFER_EMPTY = 0b00000001;
 const uint8_t K_FLAG_BUFFER_FULL = 0b00000010;
 const uint8_t K_FLAG_READ_LAST = 0b00000100;
@@ -38,6 +29,7 @@ static inline char __read_keyboard_scan(void) {
     PORTA = 1 << i;
     if (PORTC) {
       // Grab input
+      // TODO: This is wrong
       return keyboard_char_table[PORTC + i * 8];
     }
   }
@@ -62,7 +54,7 @@ void read_keyboard(void) {
   // Scan keyboard for inputs
   uint8_t keyboard_code = __read_keyboard_scan();
   PORTA = 0;
-  if (keyboard_code && !GET_KFLAG(K_FLAG_READ_LAST)) {
+  if (keyboard_code && ~GET_KFLAG(K_FLAG_READ_LAST)) {
     __kputc(keyboard_char_table[keyboard_code]);
   }
   if (keyboard_code == 0) {
