@@ -1,0 +1,2028 @@
+
+main.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800100  00000106  0000017a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000106  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000026  00000000  00000000  0000017c  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000001a4  2**2
+                  CONTENTS, READONLY, OCTETS
+  4 .debug_aranges 00000040  00000000  00000000  000001e8  2**3
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_info   000007de  00000000  00000000  00000228  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_abbrev 00000751  00000000  00000000  00000a06  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_line   00000121  00000000  00000000  00001157  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_str    0000031d  00000000  00000000  00001278  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   8:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  10:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  14:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  24:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  34:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  38:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  3c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  40:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  44:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  48:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__vector_18>
+  4c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  50:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  54:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  58:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  5c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  60:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  68:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  6c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  70:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  74:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  78:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  7c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  80:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  84:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  88:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e4       	ldi	r29, 0x40	; 64
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e6 e0       	ldi	r30, 0x06	; 6
+  a0:	f1 e0       	ldi	r31, 0x01	; 1
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a2 30       	cpi	r26, 0x02	; 2
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	0e 94 7d 00 	call	0xfa	; 0xfa <main>
+  b6:	0c 94 81 00 	jmp	0x102	; 0x102 <_exit>
+
+000000ba <__bad_interrupt>:
+  ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000be <__vector_18>:
+  be:	8f 93       	push	r24
+  c0:	8f b7       	in	r24, 0x3f	; 63
+  c2:	8f 93       	push	r24
+  c4:	f8 94       	cli
+  c6:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <counter>
+  ca:	8f 5f       	subi	r24, 0xFF	; 255
+  cc:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <counter>
+  d0:	82 b9       	out	0x02, r24	; 2
+  d2:	78 94       	sei
+  d4:	8f 91       	pop	r24
+  d6:	8f bf       	out	0x3f, r24	; 63
+  d8:	8f 91       	pop	r24
+  da:	18 95       	reti
+
+000000dc <configure_interrupt>:
+  dc:	ee e6       	ldi	r30, 0x6E	; 110
+  de:	f0 e0       	ldi	r31, 0x00	; 0
+  e0:	81 e0       	ldi	r24, 0x01	; 1
+  e2:	80 83       	st	Z, r24
+  e4:	95 e0       	ldi	r25, 0x05	; 5
+  e6:	95 bd       	out	0x25, r25	; 37
+  e8:	90 91 00 01 	lds	r25, 0x0100	; 0x800100 <counter>
+  ec:	92 b9       	out	0x02, r25	; 2
+  ee:	9f ef       	ldi	r25, 0xFF	; 255
+  f0:	91 b9       	out	0x01, r25	; 1
+  f2:	16 bc       	out	0x26, r1	; 38
+  f4:	80 83       	st	Z, r24
+  f6:	85 bb       	out	0x15, r24	; 21
+  f8:	08 95       	ret
+
+000000fa <main>:
+  fa:	0e 94 6e 00 	call	0xdc	; 0xdc <configure_interrupt>
+  fe:	78 94       	sei
+
+00000100 <.L4>:
+ 100:	ff cf       	rjmp	.-2      	; 0x100 <.L4>
+
+00000102 <_exit>:
+ 102:	f8 94       	cli
+
+00000104 <__stop_program>:
+ 104:	ff cf       	rjmp	.-2      	; 0x104 <__stop_program>
+Contents of the .debug_aranges section (loaded from main.elf):
+
+  Length:                   28
+  Version:                  2
+  Offset into .debug_info:  0x792
+  Pointer Size:             4
+  Segment Size:             0
+
+    Address    Length
+    00000102 00000004 
+    00000000 00000000 
+  Length:                   28
+  Version:                  2
+  Offset into .debug_info:  0x7b8
+  Pointer Size:             4
+  Segment Size:             0
+
+    Address    Length
+    00000098 0000001a 
+    00000000 00000000 
+
+Contents of the .debug_info section (loaded from main.elf):
+
+  Compilation Unit @ offset 0x0:
+   Length:        0x78e (32-bit)
+   Version:       2
+   Abbrev Offset: 0x0
+   Pointer Size:  4
+ <0><b>: Abbrev Number: 1 (DW_TAG_compile_unit)
+    <c>   DW_AT_producer    : (indirect string, offset: 0x0): avr-libc 2.0.0
+    <10>   DW_AT_stmt_list   : 0x0
+ <1><14>: Abbrev Number: 2 (DW_TAG_base_type)
+    <15>   DW_AT_name        : (indirect string, offset: 0xf): uint8_t
+    <19>   DW_AT_byte_size   : 1
+    <1a>   DW_AT_encoding    : 8	(unsigned char)
+ <1><1b>: Abbrev Number: 3 (DW_TAG_base_type)
+    <1c>   DW_AT_name        : (indirect string, offset: 0x17): uint16_t
+    <20>   DW_AT_byte_size   : 2
+    <21>   DW_AT_encoding    : 7	(unsigned)
+ <1><22>: Abbrev Number: 4 (DW_TAG_array_type)
+    <23>   DW_AT_type        : <0x14>
+ <2><27>: Abbrev Number: 5 (DW_TAG_subrange_type)
+    <28>   DW_AT_type        : <0x1b>
+    <2c>   DW_AT_upper_bound : 4095
+ <2><2e>: Abbrev Number: 0
+ <1><2f>: Abbrev Number: 6 (DW_TAG_variable)
+    <30>   DW_AT_name        : (indirect string, offset: 0x20): __eeprom
+    <34>   DW_AT_decl_file   : 0
+    <35>   DW_AT_decl_line   : 0
+    <36>   DW_AT_type        : <0x22>
+    <3a>   DW_AT_external    : 1
+    <3b>   DW_AT_location    : 5 byte block: 3 0 0 81 0 	(DW_OP_addr: 810000)
+ <1><41>: Abbrev Number: 7 (DW_TAG_variable)
+    <42>   DW_AT_name        : (indirect string, offset: 0x29): ADCSRB
+    <46>   DW_AT_decl_file   : 0
+    <47>   DW_AT_decl_line   : 0
+    <48>   DW_AT_type        : <0x14>
+    <4c>   DW_AT_external    : 1
+    <4d>   DW_AT_location    : 5 byte block: 3 7b 0 80 0 	(DW_OP_addr: 80007b)
+ <1><53>: Abbrev Number: 8 (DW_TAG_variable)
+    <54>   DW_AT_name        : (indirect string, offset: 0x30): ACSR
+    <58>   DW_AT_decl_file   : 0
+    <59>   DW_AT_decl_line   : 0
+    <5a>   DW_AT_type        : <0x14>
+    <5e>   DW_AT_external    : 1
+    <5f>   DW_AT_location    : 5 byte block: 3 50 0 80 0 	(DW_OP_addr: 800050)
+ <1><65>: Abbrev Number: 9 (DW_TAG_variable)
+    <66>   DW_AT_name        : (indirect string, offset: 0x35): DIDR1
+    <6a>   DW_AT_decl_file   : 0
+    <6b>   DW_AT_decl_line   : 0
+    <6c>   DW_AT_type        : <0x14>
+    <70>   DW_AT_external    : 1
+    <71>   DW_AT_location    : 5 byte block: 3 7f 0 80 0 	(DW_OP_addr: 80007f)
+ <1><77>: Abbrev Number: 10 (DW_TAG_variable)
+    <78>   DW_AT_name        : (indirect string, offset: 0x3b): UDR0
+    <7c>   DW_AT_decl_file   : 0
+    <7d>   DW_AT_decl_line   : 0
+    <7e>   DW_AT_type        : <0x14>
+    <82>   DW_AT_external    : 1
+    <83>   DW_AT_location    : 5 byte block: 3 c6 0 80 0 	(DW_OP_addr: 8000c6)
+ <1><89>: Abbrev Number: 11 (DW_TAG_variable)
+    <8a>   DW_AT_name        : (indirect string, offset: 0x40): UCSR0A
+    <8e>   DW_AT_decl_file   : 0
+    <8f>   DW_AT_decl_line   : 0
+    <90>   DW_AT_type        : <0x14>
+    <94>   DW_AT_external    : 1
+    <95>   DW_AT_location    : 5 byte block: 3 c0 0 80 0 	(DW_OP_addr: 8000c0)
+ <1><9b>: Abbrev Number: 12 (DW_TAG_variable)
+    <9c>   DW_AT_name        : (indirect string, offset: 0x47): UCSR0B
+    <a0>   DW_AT_decl_file   : 0
+    <a1>   DW_AT_decl_line   : 0
+    <a2>   DW_AT_type        : <0x14>
+    <a6>   DW_AT_external    : 1
+    <a7>   DW_AT_location    : 5 byte block: 3 c1 0 80 0 	(DW_OP_addr: 8000c1)
+ <1><ad>: Abbrev Number: 13 (DW_TAG_variable)
+    <ae>   DW_AT_name        : (indirect string, offset: 0x4e): UCSR0C
+    <b2>   DW_AT_decl_file   : 0
+    <b3>   DW_AT_decl_line   : 0
+    <b4>   DW_AT_type        : <0x14>
+    <b8>   DW_AT_external    : 1
+    <b9>   DW_AT_location    : 5 byte block: 3 c2 0 80 0 	(DW_OP_addr: 8000c2)
+ <1><bf>: Abbrev Number: 14 (DW_TAG_variable)
+    <c0>   DW_AT_name        : (indirect string, offset: 0x55): UBRR0
+    <c4>   DW_AT_decl_file   : 0
+    <c5>   DW_AT_decl_line   : 0
+    <c6>   DW_AT_type        : <0x1b>
+    <ca>   DW_AT_external    : 1
+    <cb>   DW_AT_location    : 5 byte block: 3 c4 0 80 0 	(DW_OP_addr: 8000c4)
+ <1><d1>: Abbrev Number: 15 (DW_TAG_variable)
+    <d2>   DW_AT_name        : (indirect string, offset: 0x5b): PORTA
+    <d6>   DW_AT_decl_file   : 0
+    <d7>   DW_AT_decl_line   : 0
+    <d8>   DW_AT_type        : <0x14>
+    <dc>   DW_AT_external    : 1
+    <dd>   DW_AT_location    : 5 byte block: 3 22 0 80 0 	(DW_OP_addr: 800022)
+ <1><e3>: Abbrev Number: 16 (DW_TAG_variable)
+    <e4>   DW_AT_name        : (indirect string, offset: 0x61): DDRA
+    <e8>   DW_AT_decl_file   : 0
+    <e9>   DW_AT_decl_line   : 0
+    <ea>   DW_AT_type        : <0x14>
+    <ee>   DW_AT_external    : 1
+    <ef>   DW_AT_location    : 5 byte block: 3 21 0 80 0 	(DW_OP_addr: 800021)
+ <1><f5>: Abbrev Number: 17 (DW_TAG_variable)
+    <f6>   DW_AT_name        : (indirect string, offset: 0x66): PINA
+    <fa>   DW_AT_decl_file   : 0
+    <fb>   DW_AT_decl_line   : 0
+    <fc>   DW_AT_type        : <0x14>
+    <100>   DW_AT_external    : 1
+    <101>   DW_AT_location    : 5 byte block: 3 20 0 80 0 	(DW_OP_addr: 800020)
+ <1><107>: Abbrev Number: 18 (DW_TAG_variable)
+    <108>   DW_AT_name        : (indirect string, offset: 0x6b): PORTB
+    <10c>   DW_AT_decl_file   : 0
+    <10d>   DW_AT_decl_line   : 0
+    <10e>   DW_AT_type        : <0x14>
+    <112>   DW_AT_external    : 1
+    <113>   DW_AT_location    : 5 byte block: 3 25 0 80 0 	(DW_OP_addr: 800025)
+ <1><119>: Abbrev Number: 19 (DW_TAG_variable)
+    <11a>   DW_AT_name        : (indirect string, offset: 0x71): DDRB
+    <11e>   DW_AT_decl_file   : 0
+    <11f>   DW_AT_decl_line   : 0
+    <120>   DW_AT_type        : <0x14>
+    <124>   DW_AT_external    : 1
+    <125>   DW_AT_location    : 5 byte block: 3 24 0 80 0 	(DW_OP_addr: 800024)
+ <1><12b>: Abbrev Number: 20 (DW_TAG_variable)
+    <12c>   DW_AT_name        : (indirect string, offset: 0x76): PINB
+    <130>   DW_AT_decl_file   : 0
+    <131>   DW_AT_decl_line   : 0
+    <132>   DW_AT_type        : <0x14>
+    <136>   DW_AT_external    : 1
+    <137>   DW_AT_location    : 5 byte block: 3 23 0 80 0 	(DW_OP_addr: 800023)
+ <1><13d>: Abbrev Number: 21 (DW_TAG_variable)
+    <13e>   DW_AT_name        : (indirect string, offset: 0x7b): PORTC
+    <142>   DW_AT_decl_file   : 0
+    <143>   DW_AT_decl_line   : 0
+    <144>   DW_AT_type        : <0x14>
+    <148>   DW_AT_external    : 1
+    <149>   DW_AT_location    : 5 byte block: 3 28 0 80 0 	(DW_OP_addr: 800028)
+ <1><14f>: Abbrev Number: 22 (DW_TAG_variable)
+    <150>   DW_AT_name        : (indirect string, offset: 0x81): DDRC
+    <154>   DW_AT_decl_file   : 0
+    <155>   DW_AT_decl_line   : 0
+    <156>   DW_AT_type        : <0x14>
+    <15a>   DW_AT_external    : 1
+    <15b>   DW_AT_location    : 5 byte block: 3 27 0 80 0 	(DW_OP_addr: 800027)
+ <1><161>: Abbrev Number: 23 (DW_TAG_variable)
+    <162>   DW_AT_name        : (indirect string, offset: 0x86): PINC
+    <166>   DW_AT_decl_file   : 0
+    <167>   DW_AT_decl_line   : 0
+    <168>   DW_AT_type        : <0x14>
+    <16c>   DW_AT_external    : 1
+    <16d>   DW_AT_location    : 5 byte block: 3 26 0 80 0 	(DW_OP_addr: 800026)
+ <1><173>: Abbrev Number: 24 (DW_TAG_variable)
+    <174>   DW_AT_name        : (indirect string, offset: 0x8b): PORTD
+    <178>   DW_AT_decl_file   : 0
+    <179>   DW_AT_decl_line   : 0
+    <17a>   DW_AT_type        : <0x14>
+    <17e>   DW_AT_external    : 1
+    <17f>   DW_AT_location    : 5 byte block: 3 2b 0 80 0 	(DW_OP_addr: 80002b)
+ <1><185>: Abbrev Number: 25 (DW_TAG_variable)
+    <186>   DW_AT_name        : (indirect string, offset: 0x91): DDRD
+    <18a>   DW_AT_decl_file   : 0
+    <18b>   DW_AT_decl_line   : 0
+    <18c>   DW_AT_type        : <0x14>
+    <190>   DW_AT_external    : 1
+    <191>   DW_AT_location    : 5 byte block: 3 2a 0 80 0 	(DW_OP_addr: 80002a)
+ <1><197>: Abbrev Number: 26 (DW_TAG_variable)
+    <198>   DW_AT_name        : (indirect string, offset: 0x96): PIND
+    <19c>   DW_AT_decl_file   : 0
+    <19d>   DW_AT_decl_line   : 0
+    <19e>   DW_AT_type        : <0x14>
+    <1a2>   DW_AT_external    : 1
+    <1a3>   DW_AT_location    : 5 byte block: 3 29 0 80 0 	(DW_OP_addr: 800029)
+ <1><1a9>: Abbrev Number: 27 (DW_TAG_variable)
+    <1aa>   DW_AT_name        : (indirect string, offset: 0x9b): OCR0B
+    <1ae>   DW_AT_decl_file   : 0
+    <1af>   DW_AT_decl_line   : 0
+    <1b0>   DW_AT_type        : <0x14>
+    <1b4>   DW_AT_external    : 1
+    <1b5>   DW_AT_location    : 5 byte block: 3 48 0 80 0 	(DW_OP_addr: 800048)
+ <1><1bb>: Abbrev Number: 28 (DW_TAG_variable)
+    <1bc>   DW_AT_name        : (indirect string, offset: 0xa1): OCR0A
+    <1c0>   DW_AT_decl_file   : 0
+    <1c1>   DW_AT_decl_line   : 0
+    <1c2>   DW_AT_type        : <0x14>
+    <1c6>   DW_AT_external    : 1
+    <1c7>   DW_AT_location    : 5 byte block: 3 47 0 80 0 	(DW_OP_addr: 800047)
+ <1><1cd>: Abbrev Number: 29 (DW_TAG_variable)
+    <1ce>   DW_AT_name        : (indirect string, offset: 0xa7): TCNT0
+    <1d2>   DW_AT_decl_file   : 0
+    <1d3>   DW_AT_decl_line   : 0
+    <1d4>   DW_AT_type        : <0x14>
+    <1d8>   DW_AT_external    : 1
+    <1d9>   DW_AT_location    : 5 byte block: 3 46 0 80 0 	(DW_OP_addr: 800046)
+ <1><1df>: Abbrev Number: 30 (DW_TAG_variable)
+    <1e0>   DW_AT_name        : (indirect string, offset: 0xad): TCCR0B
+    <1e4>   DW_AT_decl_file   : 0
+    <1e5>   DW_AT_decl_line   : 0
+    <1e6>   DW_AT_type        : <0x14>
+    <1ea>   DW_AT_external    : 1
+    <1eb>   DW_AT_location    : 5 byte block: 3 45 0 80 0 	(DW_OP_addr: 800045)
+ <1><1f1>: Abbrev Number: 31 (DW_TAG_variable)
+    <1f2>   DW_AT_name        : (indirect string, offset: 0xb4): TCCR0A
+    <1f6>   DW_AT_decl_file   : 0
+    <1f7>   DW_AT_decl_line   : 0
+    <1f8>   DW_AT_type        : <0x14>
+    <1fc>   DW_AT_external    : 1
+    <1fd>   DW_AT_location    : 5 byte block: 3 44 0 80 0 	(DW_OP_addr: 800044)
+ <1><203>: Abbrev Number: 32 (DW_TAG_variable)
+    <204>   DW_AT_name        : (indirect string, offset: 0xbb): TIMSK0
+    <208>   DW_AT_decl_file   : 0
+    <209>   DW_AT_decl_line   : 0
+    <20a>   DW_AT_type        : <0x14>
+    <20e>   DW_AT_external    : 1
+    <20f>   DW_AT_location    : 5 byte block: 3 6e 0 80 0 	(DW_OP_addr: 80006e)
+ <1><215>: Abbrev Number: 33 (DW_TAG_variable)
+    <216>   DW_AT_name        : (indirect string, offset: 0xc2): TIFR0
+    <21a>   DW_AT_decl_file   : 0
+    <21b>   DW_AT_decl_line   : 0
+    <21c>   DW_AT_type        : <0x14>
+    <220>   DW_AT_external    : 1
+    <221>   DW_AT_location    : 5 byte block: 3 35 0 80 0 	(DW_OP_addr: 800035)
+ <1><227>: Abbrev Number: 34 (DW_TAG_variable)
+    <228>   DW_AT_name        : (indirect string, offset: 0xc8): GTCCR
+    <22c>   DW_AT_decl_file   : 0
+    <22d>   DW_AT_decl_line   : 0
+    <22e>   DW_AT_type        : <0x14>
+    <232>   DW_AT_external    : 1
+    <233>   DW_AT_location    : 5 byte block: 3 43 0 80 0 	(DW_OP_addr: 800043)
+ <1><239>: Abbrev Number: 35 (DW_TAG_variable)
+    <23a>   DW_AT_name        : (indirect string, offset: 0xce): TIMSK1
+    <23e>   DW_AT_decl_file   : 0
+    <23f>   DW_AT_decl_line   : 0
+    <240>   DW_AT_type        : <0x14>
+    <244>   DW_AT_external    : 1
+    <245>   DW_AT_location    : 5 byte block: 3 6f 0 80 0 	(DW_OP_addr: 80006f)
+ <1><24b>: Abbrev Number: 36 (DW_TAG_variable)
+    <24c>   DW_AT_name        : (indirect string, offset: 0xd5): TIFR1
+    <250>   DW_AT_decl_file   : 0
+    <251>   DW_AT_decl_line   : 0
+    <252>   DW_AT_type        : <0x14>
+    <256>   DW_AT_external    : 1
+    <257>   DW_AT_location    : 5 byte block: 3 36 0 80 0 	(DW_OP_addr: 800036)
+ <1><25d>: Abbrev Number: 37 (DW_TAG_variable)
+    <25e>   DW_AT_name        : (indirect string, offset: 0xdb): TCCR1A
+    <262>   DW_AT_decl_file   : 0
+    <263>   DW_AT_decl_line   : 0
+    <264>   DW_AT_type        : <0x14>
+    <268>   DW_AT_external    : 1
+    <269>   DW_AT_location    : 5 byte block: 3 80 0 80 0 	(DW_OP_addr: 800080)
+ <1><26f>: Abbrev Number: 38 (DW_TAG_variable)
+    <270>   DW_AT_name        : (indirect string, offset: 0xe2): TCCR1B
+    <274>   DW_AT_decl_file   : 0
+    <275>   DW_AT_decl_line   : 0
+    <276>   DW_AT_type        : <0x14>
+    <27a>   DW_AT_external    : 1
+    <27b>   DW_AT_location    : 5 byte block: 3 81 0 80 0 	(DW_OP_addr: 800081)
+ <1><281>: Abbrev Number: 39 (DW_TAG_variable)
+    <282>   DW_AT_name        : (indirect string, offset: 0xe9): TCCR1C
+    <286>   DW_AT_decl_file   : 0
+    <287>   DW_AT_decl_line   : 0
+    <288>   DW_AT_type        : <0x14>
+    <28c>   DW_AT_external    : 1
+    <28d>   DW_AT_location    : 5 byte block: 3 82 0 80 0 	(DW_OP_addr: 800082)
+ <1><293>: Abbrev Number: 40 (DW_TAG_variable)
+    <294>   DW_AT_name        : (indirect string, offset: 0xf0): TCNT1
+    <298>   DW_AT_decl_file   : 0
+    <299>   DW_AT_decl_line   : 0
+    <29a>   DW_AT_type        : <0x1b>
+    <29e>   DW_AT_external    : 1
+    <29f>   DW_AT_location    : 5 byte block: 3 84 0 80 0 	(DW_OP_addr: 800084)
+ <1><2a5>: Abbrev Number: 41 (DW_TAG_variable)
+    <2a6>   DW_AT_name        : (indirect string, offset: 0xf6): OCR1A
+    <2aa>   DW_AT_decl_file   : 0
+    <2ab>   DW_AT_decl_line   : 0
+    <2ac>   DW_AT_type        : <0x1b>
+    <2b0>   DW_AT_external    : 1
+    <2b1>   DW_AT_location    : 5 byte block: 3 88 0 80 0 	(DW_OP_addr: 800088)
+ <1><2b7>: Abbrev Number: 42 (DW_TAG_variable)
+    <2b8>   DW_AT_name        : (indirect string, offset: 0xfc): OCR1B
+    <2bc>   DW_AT_decl_file   : 0
+    <2bd>   DW_AT_decl_line   : 0
+    <2be>   DW_AT_type        : <0x1b>
+    <2c2>   DW_AT_external    : 1
+    <2c3>   DW_AT_location    : 5 byte block: 3 8a 0 80 0 	(DW_OP_addr: 80008a)
+ <1><2c9>: Abbrev Number: 43 (DW_TAG_variable)
+    <2ca>   DW_AT_name        : (indirect string, offset: 0x102): ICR1
+    <2ce>   DW_AT_decl_file   : 0
+    <2cf>   DW_AT_decl_line   : 0
+    <2d0>   DW_AT_type        : <0x1b>
+    <2d4>   DW_AT_external    : 1
+    <2d5>   DW_AT_location    : 5 byte block: 3 86 0 80 0 	(DW_OP_addr: 800086)
+ <1><2db>: Abbrev Number: 44 (DW_TAG_variable)
+    <2dc>   DW_AT_name        : (indirect string, offset: 0x107): TIMSK2
+    <2e0>   DW_AT_decl_file   : 0
+    <2e1>   DW_AT_decl_line   : 0
+    <2e2>   DW_AT_type        : <0x14>
+    <2e6>   DW_AT_external    : 1
+    <2e7>   DW_AT_location    : 5 byte block: 3 70 0 80 0 	(DW_OP_addr: 800070)
+ <1><2ed>: Abbrev Number: 45 (DW_TAG_variable)
+    <2ee>   DW_AT_name        : (indirect string, offset: 0x10e): TIFR2
+    <2f2>   DW_AT_decl_file   : 0
+    <2f3>   DW_AT_decl_line   : 0
+    <2f4>   DW_AT_type        : <0x14>
+    <2f8>   DW_AT_external    : 1
+    <2f9>   DW_AT_location    : 5 byte block: 3 37 0 80 0 	(DW_OP_addr: 800037)
+ <1><2ff>: Abbrev Number: 46 (DW_TAG_variable)
+    <300>   DW_AT_name        : (indirect string, offset: 0x114): TCCR2A
+    <304>   DW_AT_decl_file   : 0
+    <305>   DW_AT_decl_line   : 0
+    <306>   DW_AT_type        : <0x14>
+    <30a>   DW_AT_external    : 1
+    <30b>   DW_AT_location    : 5 byte block: 3 b0 0 80 0 	(DW_OP_addr: 8000b0)
+ <1><311>: Abbrev Number: 47 (DW_TAG_variable)
+    <312>   DW_AT_name        : (indirect string, offset: 0x11b): TCCR2B
+    <316>   DW_AT_decl_file   : 0
+    <317>   DW_AT_decl_line   : 0
+    <318>   DW_AT_type        : <0x14>
+    <31c>   DW_AT_external    : 1
+    <31d>   DW_AT_location    : 5 byte block: 3 b1 0 80 0 	(DW_OP_addr: 8000b1)
+ <1><323>: Abbrev Number: 48 (DW_TAG_variable)
+    <324>   DW_AT_name        : (indirect string, offset: 0x122): TCNT2
+    <328>   DW_AT_decl_file   : 0
+    <329>   DW_AT_decl_line   : 0
+    <32a>   DW_AT_type        : <0x14>
+    <32e>   DW_AT_external    : 1
+    <32f>   DW_AT_location    : 5 byte block: 3 b2 0 80 0 	(DW_OP_addr: 8000b2)
+ <1><335>: Abbrev Number: 49 (DW_TAG_variable)
+    <336>   DW_AT_name        : (indirect string, offset: 0x128): OCR2B
+    <33a>   DW_AT_decl_file   : 0
+    <33b>   DW_AT_decl_line   : 0
+    <33c>   DW_AT_type        : <0x14>
+    <340>   DW_AT_external    : 1
+    <341>   DW_AT_location    : 5 byte block: 3 b4 0 80 0 	(DW_OP_addr: 8000b4)
+ <1><347>: Abbrev Number: 50 (DW_TAG_variable)
+    <348>   DW_AT_name        : (indirect string, offset: 0x12e): OCR2A
+    <34c>   DW_AT_decl_file   : 0
+    <34d>   DW_AT_decl_line   : 0
+    <34e>   DW_AT_type        : <0x14>
+    <352>   DW_AT_external    : 1
+    <353>   DW_AT_location    : 5 byte block: 3 b3 0 80 0 	(DW_OP_addr: 8000b3)
+ <1><359>: Abbrev Number: 51 (DW_TAG_variable)
+    <35a>   DW_AT_name        : (indirect string, offset: 0x134): ASSR
+    <35e>   DW_AT_decl_file   : 0
+    <35f>   DW_AT_decl_line   : 0
+    <360>   DW_AT_type        : <0x14>
+    <364>   DW_AT_external    : 1
+    <365>   DW_AT_location    : 5 byte block: 3 b6 0 80 0 	(DW_OP_addr: 8000b6)
+ <1><36b>: Abbrev Number: 52 (DW_TAG_variable)
+    <36c>   DW_AT_name        : (indirect string, offset: 0x139): GTCCR
+    <370>   DW_AT_decl_file   : 0
+    <371>   DW_AT_decl_line   : 0
+    <372>   DW_AT_type        : <0x14>
+    <376>   DW_AT_external    : 1
+    <377>   DW_AT_location    : 5 byte block: 3 43 0 80 0 	(DW_OP_addr: 800043)
+ <1><37d>: Abbrev Number: 53 (DW_TAG_variable)
+    <37e>   DW_AT_name        : (indirect string, offset: 0x13f): TIMSK3
+    <382>   DW_AT_decl_file   : 0
+    <383>   DW_AT_decl_line   : 0
+    <384>   DW_AT_type        : <0x14>
+    <388>   DW_AT_external    : 1
+    <389>   DW_AT_location    : 5 byte block: 3 71 0 80 0 	(DW_OP_addr: 800071)
+ <1><38f>: Abbrev Number: 54 (DW_TAG_variable)
+    <390>   DW_AT_name        : (indirect string, offset: 0x146): TIFR3
+    <394>   DW_AT_decl_file   : 0
+    <395>   DW_AT_decl_line   : 0
+    <396>   DW_AT_type        : <0x14>
+    <39a>   DW_AT_external    : 1
+    <39b>   DW_AT_location    : 5 byte block: 3 38 0 80 0 	(DW_OP_addr: 800038)
+ <1><3a1>: Abbrev Number: 55 (DW_TAG_variable)
+    <3a2>   DW_AT_name        : (indirect string, offset: 0x14c): TCCR3A
+    <3a6>   DW_AT_decl_file   : 0
+    <3a7>   DW_AT_decl_line   : 0
+    <3a8>   DW_AT_type        : <0x14>
+    <3ac>   DW_AT_external    : 1
+    <3ad>   DW_AT_location    : 5 byte block: 3 90 0 80 0 	(DW_OP_addr: 800090)
+ <1><3b3>: Abbrev Number: 56 (DW_TAG_variable)
+    <3b4>   DW_AT_name        : (indirect string, offset: 0x153): TCCR3B
+    <3b8>   DW_AT_decl_file   : 0
+    <3b9>   DW_AT_decl_line   : 0
+    <3ba>   DW_AT_type        : <0x14>
+    <3be>   DW_AT_external    : 1
+    <3bf>   DW_AT_location    : 5 byte block: 3 91 0 80 0 	(DW_OP_addr: 800091)
+ <1><3c5>: Abbrev Number: 57 (DW_TAG_variable)
+    <3c6>   DW_AT_name        : (indirect string, offset: 0x15a): TCCR3C
+    <3ca>   DW_AT_decl_file   : 0
+    <3cb>   DW_AT_decl_line   : 0
+    <3cc>   DW_AT_type        : <0x14>
+    <3d0>   DW_AT_external    : 1
+    <3d1>   DW_AT_location    : 5 byte block: 3 92 0 80 0 	(DW_OP_addr: 800092)
+ <1><3d7>: Abbrev Number: 58 (DW_TAG_variable)
+    <3d8>   DW_AT_name        : (indirect string, offset: 0x161): TCNT3
+    <3dc>   DW_AT_decl_file   : 0
+    <3dd>   DW_AT_decl_line   : 0
+    <3de>   DW_AT_type        : <0x1b>
+    <3e2>   DW_AT_external    : 1
+    <3e3>   DW_AT_location    : 5 byte block: 3 94 0 80 0 	(DW_OP_addr: 800094)
+ <1><3e9>: Abbrev Number: 59 (DW_TAG_variable)
+    <3ea>   DW_AT_name        : (indirect string, offset: 0x167): OCR3A
+    <3ee>   DW_AT_decl_file   : 0
+    <3ef>   DW_AT_decl_line   : 0
+    <3f0>   DW_AT_type        : <0x1b>
+    <3f4>   DW_AT_external    : 1
+    <3f5>   DW_AT_location    : 5 byte block: 3 98 0 80 0 	(DW_OP_addr: 800098)
+ <1><3fb>: Abbrev Number: 60 (DW_TAG_variable)
+    <3fc>   DW_AT_name        : (indirect string, offset: 0x16d): OCR3B
+    <400>   DW_AT_decl_file   : 0
+    <401>   DW_AT_decl_line   : 0
+    <402>   DW_AT_type        : <0x1b>
+    <406>   DW_AT_external    : 1
+    <407>   DW_AT_location    : 5 byte block: 3 9a 0 80 0 	(DW_OP_addr: 80009a)
+ <1><40d>: Abbrev Number: 61 (DW_TAG_variable)
+    <40e>   DW_AT_name        : (indirect string, offset: 0x173): ICR3
+    <412>   DW_AT_decl_file   : 0
+    <413>   DW_AT_decl_line   : 0
+    <414>   DW_AT_type        : <0x1b>
+    <418>   DW_AT_external    : 1
+    <419>   DW_AT_location    : 5 byte block: 3 96 0 80 0 	(DW_OP_addr: 800096)
+ <1><41f>: Abbrev Number: 62 (DW_TAG_variable)
+    <420>   DW_AT_name        : (indirect string, offset: 0x178): SPMCSR
+    <424>   DW_AT_decl_file   : 0
+    <425>   DW_AT_decl_line   : 0
+    <426>   DW_AT_type        : <0x14>
+    <42a>   DW_AT_external    : 1
+    <42b>   DW_AT_location    : 5 byte block: 3 57 0 80 0 	(DW_OP_addr: 800057)
+ <1><431>: Abbrev Number: 63 (DW_TAG_variable)
+    <432>   DW_AT_name        : (indirect string, offset: 0x17f): EICRA
+    <436>   DW_AT_decl_file   : 0
+    <437>   DW_AT_decl_line   : 0
+    <438>   DW_AT_type        : <0x14>
+    <43c>   DW_AT_external    : 1
+    <43d>   DW_AT_location    : 5 byte block: 3 69 0 80 0 	(DW_OP_addr: 800069)
+ <1><443>: Abbrev Number: 64 (DW_TAG_variable)
+    <444>   DW_AT_name        : (indirect string, offset: 0x185): EIMSK
+    <448>   DW_AT_decl_file   : 0
+    <449>   DW_AT_decl_line   : 0
+    <44a>   DW_AT_type        : <0x14>
+    <44e>   DW_AT_external    : 1
+    <44f>   DW_AT_location    : 5 byte block: 3 3d 0 80 0 	(DW_OP_addr: 80003d)
+ <1><455>: Abbrev Number: 65 (DW_TAG_variable)
+    <456>   DW_AT_name        : (indirect string, offset: 0x18b): EIFR
+    <45a>   DW_AT_decl_file   : 0
+    <45b>   DW_AT_decl_line   : 0
+    <45c>   DW_AT_type        : <0x14>
+    <460>   DW_AT_external    : 1
+    <461>   DW_AT_location    : 5 byte block: 3 3c 0 80 0 	(DW_OP_addr: 80003c)
+ <1><467>: Abbrev Number: 66 (DW_TAG_variable)
+    <468>   DW_AT_name        : (indirect string, offset: 0x190): PCMSK3
+    <46c>   DW_AT_decl_file   : 0
+    <46d>   DW_AT_decl_line   : 0
+    <46e>   DW_AT_type        : <0x14>
+    <472>   DW_AT_external    : 1
+    <473>   DW_AT_location    : 5 byte block: 3 73 0 80 0 	(DW_OP_addr: 800073)
+ <1><479>: Abbrev Number: 67 (DW_TAG_variable)
+    <47a>   DW_AT_name        : (indirect string, offset: 0x197): PCMSK2
+    <47e>   DW_AT_decl_file   : 0
+    <47f>   DW_AT_decl_line   : 0
+    <480>   DW_AT_type        : <0x14>
+    <484>   DW_AT_external    : 1
+    <485>   DW_AT_location    : 5 byte block: 3 6d 0 80 0 	(DW_OP_addr: 80006d)
+ <1><48b>: Abbrev Number: 68 (DW_TAG_variable)
+    <48c>   DW_AT_name        : (indirect string, offset: 0x19e): PCMSK1
+    <490>   DW_AT_decl_file   : 0
+    <491>   DW_AT_decl_line   : 0
+    <492>   DW_AT_type        : <0x14>
+    <496>   DW_AT_external    : 1
+    <497>   DW_AT_location    : 5 byte block: 3 6c 0 80 0 	(DW_OP_addr: 80006c)
+ <1><49d>: Abbrev Number: 69 (DW_TAG_variable)
+    <49e>   DW_AT_name        : (indirect string, offset: 0x1a5): PCMSK0
+    <4a2>   DW_AT_decl_file   : 0
+    <4a3>   DW_AT_decl_line   : 0
+    <4a4>   DW_AT_type        : <0x14>
+    <4a8>   DW_AT_external    : 1
+    <4a9>   DW_AT_location    : 5 byte block: 3 6b 0 80 0 	(DW_OP_addr: 80006b)
+ <1><4af>: Abbrev Number: 70 (DW_TAG_variable)
+    <4b0>   DW_AT_name        : (indirect string, offset: 0x1ac): PCIFR
+    <4b4>   DW_AT_decl_file   : 0
+    <4b5>   DW_AT_decl_line   : 0
+    <4b6>   DW_AT_type        : <0x14>
+    <4ba>   DW_AT_external    : 1
+    <4bb>   DW_AT_location    : 5 byte block: 3 3b 0 80 0 	(DW_OP_addr: 80003b)
+ <1><4c1>: Abbrev Number: 71 (DW_TAG_variable)
+    <4c2>   DW_AT_name        : (indirect string, offset: 0x1b2): PCICR
+    <4c6>   DW_AT_decl_file   : 0
+    <4c7>   DW_AT_decl_line   : 0
+    <4c8>   DW_AT_type        : <0x14>
+    <4cc>   DW_AT_external    : 1
+    <4cd>   DW_AT_location    : 5 byte block: 3 68 0 80 0 	(DW_OP_addr: 800068)
+ <1><4d3>: Abbrev Number: 72 (DW_TAG_variable)
+    <4d4>   DW_AT_name        : (indirect string, offset: 0x1b8): ADMUX
+    <4d8>   DW_AT_decl_file   : 0
+    <4d9>   DW_AT_decl_line   : 0
+    <4da>   DW_AT_type        : <0x14>
+    <4de>   DW_AT_external    : 1
+    <4df>   DW_AT_location    : 5 byte block: 3 7c 0 80 0 	(DW_OP_addr: 80007c)
+ <1><4e5>: Abbrev Number: 73 (DW_TAG_variable)
+    <4e6>   DW_AT_name        : (indirect string, offset: 0x1be): ADC
+    <4ea>   DW_AT_decl_file   : 0
+    <4eb>   DW_AT_decl_line   : 0
+    <4ec>   DW_AT_type        : <0x1b>
+    <4f0>   DW_AT_external    : 1
+    <4f1>   DW_AT_location    : 5 byte block: 3 78 0 80 0 	(DW_OP_addr: 800078)
+ <1><4f7>: Abbrev Number: 74 (DW_TAG_variable)
+    <4f8>   DW_AT_name        : (indirect string, offset: 0x1c2): ADCSRA
+    <4fc>   DW_AT_decl_file   : 0
+    <4fd>   DW_AT_decl_line   : 0
+    <4fe>   DW_AT_type        : <0x14>
+    <502>   DW_AT_external    : 1
+    <503>   DW_AT_location    : 5 byte block: 3 7a 0 80 0 	(DW_OP_addr: 80007a)
+ <1><509>: Abbrev Number: 75 (DW_TAG_variable)
+    <50a>   DW_AT_name        : (indirect string, offset: 0x1c9): ADCSRB
+    <50e>   DW_AT_decl_file   : 0
+    <50f>   DW_AT_decl_line   : 0
+    <510>   DW_AT_type        : <0x14>
+    <514>   DW_AT_external    : 1
+    <515>   DW_AT_location    : 5 byte block: 3 7b 0 80 0 	(DW_OP_addr: 80007b)
+ <1><51b>: Abbrev Number: 76 (DW_TAG_variable)
+    <51c>   DW_AT_name        : (indirect string, offset: 0x1d0): DIDR0
+    <520>   DW_AT_decl_file   : 0
+    <521>   DW_AT_decl_line   : 0
+    <522>   DW_AT_type        : <0x14>
+    <526>   DW_AT_external    : 1
+    <527>   DW_AT_location    : 5 byte block: 3 7e 0 80 0 	(DW_OP_addr: 80007e)
+ <1><52d>: Abbrev Number: 77 (DW_TAG_variable)
+    <52e>   DW_AT_name        : (indirect string, offset: 0x1d6): OCDR
+    <532>   DW_AT_decl_file   : 0
+    <533>   DW_AT_decl_line   : 0
+    <534>   DW_AT_type        : <0x14>
+    <538>   DW_AT_external    : 1
+    <539>   DW_AT_location    : 5 byte block: 3 51 0 80 0 	(DW_OP_addr: 800051)
+ <1><53f>: Abbrev Number: 78 (DW_TAG_variable)
+    <540>   DW_AT_name        : (indirect string, offset: 0x1db): MCUCR
+    <544>   DW_AT_decl_file   : 0
+    <545>   DW_AT_decl_line   : 0
+    <546>   DW_AT_type        : <0x14>
+    <54a>   DW_AT_external    : 1
+    <54b>   DW_AT_location    : 5 byte block: 3 55 0 80 0 	(DW_OP_addr: 800055)
+ <1><551>: Abbrev Number: 79 (DW_TAG_variable)
+    <552>   DW_AT_name        : (indirect string, offset: 0x1e1): MCUSR
+    <556>   DW_AT_decl_file   : 0
+    <557>   DW_AT_decl_line   : 0
+    <558>   DW_AT_type        : <0x14>
+    <55c>   DW_AT_external    : 1
+    <55d>   DW_AT_location    : 5 byte block: 3 54 0 80 0 	(DW_OP_addr: 800054)
+ <1><563>: Abbrev Number: 80 (DW_TAG_variable)
+    <564>   DW_AT_name        : (indirect string, offset: 0x1e7): EEAR
+    <568>   DW_AT_decl_file   : 0
+    <569>   DW_AT_decl_line   : 0
+    <56a>   DW_AT_type        : <0x1b>
+    <56e>   DW_AT_external    : 1
+    <56f>   DW_AT_location    : 5 byte block: 3 41 0 80 0 	(DW_OP_addr: 800041)
+ <1><575>: Abbrev Number: 81 (DW_TAG_variable)
+    <576>   DW_AT_name        : (indirect string, offset: 0x1ec): EEDR
+    <57a>   DW_AT_decl_file   : 0
+    <57b>   DW_AT_decl_line   : 0
+    <57c>   DW_AT_type        : <0x14>
+    <580>   DW_AT_external    : 1
+    <581>   DW_AT_location    : 5 byte block: 3 40 0 80 0 	(DW_OP_addr: 800040)
+ <1><587>: Abbrev Number: 82 (DW_TAG_variable)
+    <588>   DW_AT_name        : (indirect string, offset: 0x1f1): EECR
+    <58c>   DW_AT_decl_file   : 0
+    <58d>   DW_AT_decl_line   : 0
+    <58e>   DW_AT_type        : <0x14>
+    <592>   DW_AT_external    : 1
+    <593>   DW_AT_location    : 5 byte block: 3 3f 0 80 0 	(DW_OP_addr: 80003f)
+ <1><599>: Abbrev Number: 83 (DW_TAG_variable)
+    <59a>   DW_AT_name        : (indirect string, offset: 0x1f6): TWAMR
+    <59e>   DW_AT_decl_file   : 0
+    <59f>   DW_AT_decl_line   : 0
+    <5a0>   DW_AT_type        : <0x14>
+    <5a4>   DW_AT_external    : 1
+    <5a5>   DW_AT_location    : 5 byte block: 3 bd 0 80 0 	(DW_OP_addr: 8000bd)
+ <1><5ab>: Abbrev Number: 84 (DW_TAG_variable)
+    <5ac>   DW_AT_name        : (indirect string, offset: 0x1fc): TWBR
+    <5b0>   DW_AT_decl_file   : 0
+    <5b1>   DW_AT_decl_line   : 0
+    <5b2>   DW_AT_type        : <0x14>
+    <5b6>   DW_AT_external    : 1
+    <5b7>   DW_AT_location    : 5 byte block: 3 b8 0 80 0 	(DW_OP_addr: 8000b8)
+ <1><5bd>: Abbrev Number: 85 (DW_TAG_variable)
+    <5be>   DW_AT_name        : (indirect string, offset: 0x201): TWCR
+    <5c2>   DW_AT_decl_file   : 0
+    <5c3>   DW_AT_decl_line   : 0
+    <5c4>   DW_AT_type        : <0x14>
+    <5c8>   DW_AT_external    : 1
+    <5c9>   DW_AT_location    : 5 byte block: 3 bc 0 80 0 	(DW_OP_addr: 8000bc)
+ <1><5cf>: Abbrev Number: 86 (DW_TAG_variable)
+    <5d0>   DW_AT_name        : (indirect string, offset: 0x206): TWSR
+    <5d4>   DW_AT_decl_file   : 0
+    <5d5>   DW_AT_decl_line   : 0
+    <5d6>   DW_AT_type        : <0x14>
+    <5da>   DW_AT_external    : 1
+    <5db>   DW_AT_location    : 5 byte block: 3 b9 0 80 0 	(DW_OP_addr: 8000b9)
+ <1><5e1>: Abbrev Number: 87 (DW_TAG_variable)
+    <5e2>   DW_AT_name        : (indirect string, offset: 0x20b): TWDR
+    <5e6>   DW_AT_decl_file   : 0
+    <5e7>   DW_AT_decl_line   : 0
+    <5e8>   DW_AT_type        : <0x14>
+    <5ec>   DW_AT_external    : 1
+    <5ed>   DW_AT_location    : 5 byte block: 3 bb 0 80 0 	(DW_OP_addr: 8000bb)
+ <1><5f3>: Abbrev Number: 88 (DW_TAG_variable)
+    <5f4>   DW_AT_name        : (indirect string, offset: 0x210): TWAR
+    <5f8>   DW_AT_decl_file   : 0
+    <5f9>   DW_AT_decl_line   : 0
+    <5fa>   DW_AT_type        : <0x14>
+    <5fe>   DW_AT_external    : 1
+    <5ff>   DW_AT_location    : 5 byte block: 3 ba 0 80 0 	(DW_OP_addr: 8000ba)
+ <1><605>: Abbrev Number: 89 (DW_TAG_variable)
+    <606>   DW_AT_name        : (indirect string, offset: 0x215): UDR1
+    <60a>   DW_AT_decl_file   : 0
+    <60b>   DW_AT_decl_line   : 0
+    <60c>   DW_AT_type        : <0x14>
+    <610>   DW_AT_external    : 1
+    <611>   DW_AT_location    : 5 byte block: 3 ce 0 80 0 	(DW_OP_addr: 8000ce)
+ <1><617>: Abbrev Number: 90 (DW_TAG_variable)
+    <618>   DW_AT_name        : (indirect string, offset: 0x21a): UCSR1A
+    <61c>   DW_AT_decl_file   : 0
+    <61d>   DW_AT_decl_line   : 0
+    <61e>   DW_AT_type        : <0x14>
+    <622>   DW_AT_external    : 1
+    <623>   DW_AT_location    : 5 byte block: 3 c8 0 80 0 	(DW_OP_addr: 8000c8)
+ <1><629>: Abbrev Number: 91 (DW_TAG_variable)
+    <62a>   DW_AT_name        : (indirect string, offset: 0x221): UCSR1B
+    <62e>   DW_AT_decl_file   : 0
+    <62f>   DW_AT_decl_line   : 0
+    <630>   DW_AT_type        : <0x14>
+    <634>   DW_AT_external    : 1
+    <635>   DW_AT_location    : 5 byte block: 3 c9 0 80 0 	(DW_OP_addr: 8000c9)
+ <1><63b>: Abbrev Number: 92 (DW_TAG_variable)
+    <63c>   DW_AT_name        : (indirect string, offset: 0x228): UCSR1C
+    <640>   DW_AT_decl_file   : 0
+    <641>   DW_AT_decl_line   : 0
+    <642>   DW_AT_type        : <0x14>
+    <646>   DW_AT_external    : 1
+    <647>   DW_AT_location    : 5 byte block: 3 ca 0 80 0 	(DW_OP_addr: 8000ca)
+ <1><64d>: Abbrev Number: 93 (DW_TAG_variable)
+    <64e>   DW_AT_name        : (indirect string, offset: 0x22f): UBRR1
+    <652>   DW_AT_decl_file   : 0
+    <653>   DW_AT_decl_line   : 0
+    <654>   DW_AT_type        : <0x1b>
+    <658>   DW_AT_external    : 1
+    <659>   DW_AT_location    : 5 byte block: 3 cc 0 80 0 	(DW_OP_addr: 8000cc)
+ <1><65f>: Abbrev Number: 94 (DW_TAG_variable)
+    <660>   DW_AT_name        : (indirect string, offset: 0x235): SPDR
+    <664>   DW_AT_decl_file   : 0
+    <665>   DW_AT_decl_line   : 0
+    <666>   DW_AT_type        : <0x14>
+    <66a>   DW_AT_external    : 1
+    <66b>   DW_AT_location    : 5 byte block: 3 4e 0 80 0 	(DW_OP_addr: 80004e)
+ <1><671>: Abbrev Number: 95 (DW_TAG_variable)
+    <672>   DW_AT_name        : (indirect string, offset: 0x23a): SPSR
+    <676>   DW_AT_decl_file   : 0
+    <677>   DW_AT_decl_line   : 0
+    <678>   DW_AT_type        : <0x14>
+    <67c>   DW_AT_external    : 1
+    <67d>   DW_AT_location    : 5 byte block: 3 4d 0 80 0 	(DW_OP_addr: 80004d)
+ <1><683>: Abbrev Number: 96 (DW_TAG_variable)
+    <684>   DW_AT_name        : (indirect string, offset: 0x23f): SPCR
+    <688>   DW_AT_decl_file   : 0
+    <689>   DW_AT_decl_line   : 0
+    <68a>   DW_AT_type        : <0x14>
+    <68e>   DW_AT_external    : 1
+    <68f>   DW_AT_location    : 5 byte block: 3 4c 0 80 0 	(DW_OP_addr: 80004c)
+ <1><695>: Abbrev Number: 97 (DW_TAG_variable)
+    <696>   DW_AT_name        : (indirect string, offset: 0x244): WDTCSR
+    <69a>   DW_AT_decl_file   : 0
+    <69b>   DW_AT_decl_line   : 0
+    <69c>   DW_AT_type        : <0x14>
+    <6a0>   DW_AT_external    : 1
+    <6a1>   DW_AT_location    : 5 byte block: 3 60 0 80 0 	(DW_OP_addr: 800060)
+ <1><6a7>: Abbrev Number: 98 (DW_TAG_variable)
+    <6a8>   DW_AT_name        : (indirect string, offset: 0x24b): SREG
+    <6ac>   DW_AT_decl_file   : 0
+    <6ad>   DW_AT_decl_line   : 0
+    <6ae>   DW_AT_type        : <0x14>
+    <6b2>   DW_AT_external    : 1
+    <6b3>   DW_AT_location    : 5 byte block: 3 5f 0 80 0 	(DW_OP_addr: 80005f)
+ <1><6b9>: Abbrev Number: 99 (DW_TAG_variable)
+    <6ba>   DW_AT_name        : (indirect string, offset: 0x250): SP
+    <6be>   DW_AT_decl_file   : 0
+    <6bf>   DW_AT_decl_line   : 0
+    <6c0>   DW_AT_type        : <0x1b>
+    <6c4>   DW_AT_external    : 1
+    <6c5>   DW_AT_location    : 5 byte block: 3 5d 0 80 0 	(DW_OP_addr: 80005d)
+ <1><6cb>: Abbrev Number: 100 (DW_TAG_variable)
+    <6cc>   DW_AT_name        : (indirect string, offset: 0x253): MCUCR
+    <6d0>   DW_AT_decl_file   : 0
+    <6d1>   DW_AT_decl_line   : 0
+    <6d2>   DW_AT_type        : <0x14>
+    <6d6>   DW_AT_external    : 1
+    <6d7>   DW_AT_location    : 5 byte block: 3 55 0 80 0 	(DW_OP_addr: 800055)
+ <1><6dd>: Abbrev Number: 101 (DW_TAG_variable)
+    <6de>   DW_AT_name        : (indirect string, offset: 0x259): MCUSR
+    <6e2>   DW_AT_decl_file   : 0
+    <6e3>   DW_AT_decl_line   : 0
+    <6e4>   DW_AT_type        : <0x14>
+    <6e8>   DW_AT_external    : 1
+    <6e9>   DW_AT_location    : 5 byte block: 3 54 0 80 0 	(DW_OP_addr: 800054)
+ <1><6ef>: Abbrev Number: 102 (DW_TAG_variable)
+    <6f0>   DW_AT_name        : (indirect string, offset: 0x25f): OSCCAL
+    <6f4>   DW_AT_decl_file   : 0
+    <6f5>   DW_AT_decl_line   : 0
+    <6f6>   DW_AT_type        : <0x14>
+    <6fa>   DW_AT_external    : 1
+    <6fb>   DW_AT_location    : 5 byte block: 3 66 0 80 0 	(DW_OP_addr: 800066)
+ <1><701>: Abbrev Number: 103 (DW_TAG_variable)
+    <702>   DW_AT_name        : (indirect string, offset: 0x266): CLKPR
+    <706>   DW_AT_decl_file   : 0
+    <707>   DW_AT_decl_line   : 0
+    <708>   DW_AT_type        : <0x14>
+    <70c>   DW_AT_external    : 1
+    <70d>   DW_AT_location    : 5 byte block: 3 61 0 80 0 	(DW_OP_addr: 800061)
+ <1><713>: Abbrev Number: 104 (DW_TAG_variable)
+    <714>   DW_AT_name        : (indirect string, offset: 0x26c): SMCR
+    <718>   DW_AT_decl_file   : 0
+    <719>   DW_AT_decl_line   : 0
+    <71a>   DW_AT_type        : <0x14>
+    <71e>   DW_AT_external    : 1
+    <71f>   DW_AT_location    : 5 byte block: 3 53 0 80 0 	(DW_OP_addr: 800053)
+ <1><725>: Abbrev Number: 105 (DW_TAG_variable)
+    <726>   DW_AT_name        : (indirect string, offset: 0x271): RAMPZ
+    <72a>   DW_AT_decl_file   : 0
+    <72b>   DW_AT_decl_line   : 0
+    <72c>   DW_AT_type        : <0x14>
+    <730>   DW_AT_external    : 1
+    <731>   DW_AT_location    : 5 byte block: 3 5b 0 80 0 	(DW_OP_addr: 80005b)
+ <1><737>: Abbrev Number: 106 (DW_TAG_variable)
+    <738>   DW_AT_name        : (indirect string, offset: 0x277): GPIOR2
+    <73c>   DW_AT_decl_file   : 0
+    <73d>   DW_AT_decl_line   : 0
+    <73e>   DW_AT_type        : <0x14>
+    <742>   DW_AT_external    : 1
+    <743>   DW_AT_location    : 5 byte block: 3 4b 0 80 0 	(DW_OP_addr: 80004b)
+ <1><749>: Abbrev Number: 107 (DW_TAG_variable)
+    <74a>   DW_AT_name        : (indirect string, offset: 0x27e): GPIOR1
+    <74e>   DW_AT_decl_file   : 0
+    <74f>   DW_AT_decl_line   : 0
+    <750>   DW_AT_type        : <0x14>
+    <754>   DW_AT_external    : 1
+    <755>   DW_AT_location    : 5 byte block: 3 4a 0 80 0 	(DW_OP_addr: 80004a)
+ <1><75b>: Abbrev Number: 108 (DW_TAG_variable)
+    <75c>   DW_AT_name        : (indirect string, offset: 0x285): GPIOR0
+    <760>   DW_AT_decl_file   : 0
+    <761>   DW_AT_decl_line   : 0
+    <762>   DW_AT_type        : <0x14>
+    <766>   DW_AT_external    : 1
+    <767>   DW_AT_location    : 5 byte block: 3 3e 0 80 0 	(DW_OP_addr: 80003e)
+ <1><76d>: Abbrev Number: 109 (DW_TAG_variable)
+    <76e>   DW_AT_name        : (indirect string, offset: 0x28c): PRR0
+    <772>   DW_AT_decl_file   : 0
+    <773>   DW_AT_decl_line   : 0
+    <774>   DW_AT_type        : <0x14>
+    <778>   DW_AT_external    : 1
+    <779>   DW_AT_location    : 5 byte block: 3 64 0 80 0 	(DW_OP_addr: 800064)
+ <1><77f>: Abbrev Number: 110 (DW_TAG_variable)
+    <780>   DW_AT_name        : (indirect string, offset: 0x291): PRR1
+    <784>   DW_AT_decl_file   : 0
+    <785>   DW_AT_decl_line   : 0
+    <786>   DW_AT_type        : <0x14>
+    <78a>   DW_AT_external    : 1
+    <78b>   DW_AT_location    : 5 byte block: 3 65 0 80 0 	(DW_OP_addr: 800065)
+ <1><791>: Abbrev Number: 0
+  Compilation Unit @ offset 0x792:
+   Length:        0x22 (32-bit)
+   Version:       2
+   Abbrev Offset: 0x729
+   Pointer Size:  4
+ <0><79d>: Abbrev Number: 1 (DW_TAG_compile_unit)
+    <79e>   DW_AT_stmt_list   : 0x1d
+    <7a2>   DW_AT_low_pc      : 0x102
+    <7a6>   DW_AT_high_pc     : 0x106
+    <7aa>   DW_AT_name        : (indirect string, offset: 0x296): ../../../../libgcc/config/avr/lib1funcs.S
+    <7ae>   DW_AT_comp_dir    : (indirect string, offset: 0x2c0): /private/tmp/avr-gccA9-20220112-91111-1jyadpc/gcc-9.3.0/build/avr/avr51/libgcc
+    <7b2>   DW_AT_producer    : (indirect string, offset: 0x30f): GNU AS 2.36.1
+    <7b6>   DW_AT_language    : 32769	(MIPS assembler)
+  Compilation Unit @ offset 0x7b8:
+   Length:        0x22 (32-bit)
+   Version:       2
+   Abbrev Offset: 0x73d
+   Pointer Size:  4
+ <0><7c3>: Abbrev Number: 1 (DW_TAG_compile_unit)
+    <7c4>   DW_AT_stmt_list   : 0x7e
+    <7c8>   DW_AT_low_pc      : 0x98
+    <7cc>   DW_AT_high_pc     : 0xb2
+    <7d0>   DW_AT_name        : (indirect string, offset: 0x296): ../../../../libgcc/config/avr/lib1funcs.S
+    <7d4>   DW_AT_comp_dir    : (indirect string, offset: 0x2c0): /private/tmp/avr-gccA9-20220112-91111-1jyadpc/gcc-9.3.0/build/avr/avr51/libgcc
+    <7d8>   DW_AT_producer    : (indirect string, offset: 0x30f): GNU AS 2.36.1
+    <7dc>   DW_AT_language    : 32769	(MIPS assembler)
+
+Contents of the .debug_abbrev section (loaded from main.elf):
+
+  Number TAG (0x0)
+   1      DW_TAG_compile_unit    [has children]
+    DW_AT_producer     DW_FORM_strp
+    DW_AT_stmt_list    DW_FORM_data4
+    DW_AT value: 0     DW_FORM value: 0
+   2      DW_TAG_base_type    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT_encoding     DW_FORM_data1
+    DW_AT value: 0     DW_FORM value: 0
+   3      DW_TAG_base_type    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_byte_size    DW_FORM_data1
+    DW_AT_encoding     DW_FORM_data1
+    DW_AT value: 0     DW_FORM value: 0
+   4      DW_TAG_array_type    [has children]
+    DW_AT_type         DW_FORM_ref4
+    DW_AT value: 0     DW_FORM value: 0
+   5      DW_TAG_subrange_type    [no children]
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_upper_bound  DW_FORM_data2
+    DW_AT value: 0     DW_FORM value: 0
+   6      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   7      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   8      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   9      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   10      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   11      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   12      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   13      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   14      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   15      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   16      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   17      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   18      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   19      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   20      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   21      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   22      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   23      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   24      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   25      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   26      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   27      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   28      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   29      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   30      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   31      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   32      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   33      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   34      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   35      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   36      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   37      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   38      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   39      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   40      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   41      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   42      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   43      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   44      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   45      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   46      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   47      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   48      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   49      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   50      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   51      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   52      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   53      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   54      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   55      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   56      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   57      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   58      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   59      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   60      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   61      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   62      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   63      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   64      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   65      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   66      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   67      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   68      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   69      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   70      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   71      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   72      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   73      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   74      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   75      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   76      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   77      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   78      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   79      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   80      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   81      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   82      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   83      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   84      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   85      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   86      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   87      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   88      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   89      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   90      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   91      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   92      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   93      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   94      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   95      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   96      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   97      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   98      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   99      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   100      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   101      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   102      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   103      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   104      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   105      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   106      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   107      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   108      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   109      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+   110      DW_TAG_variable    [no children]
+    DW_AT_name         DW_FORM_strp
+    DW_AT_decl_file    DW_FORM_data1
+    DW_AT_decl_line    DW_FORM_data1
+    DW_AT_type         DW_FORM_ref4
+    DW_AT_external     DW_FORM_flag
+    DW_AT_location     DW_FORM_block1
+    DW_AT value: 0     DW_FORM value: 0
+  Number TAG (0x729)
+   1      DW_TAG_compile_unit    [no children]
+    DW_AT_stmt_list    DW_FORM_data4
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_addr
+    DW_AT_name         DW_FORM_strp
+    DW_AT_comp_dir     DW_FORM_strp
+    DW_AT_producer     DW_FORM_strp
+    DW_AT_language     DW_FORM_data2
+    DW_AT value: 0     DW_FORM value: 0
+  Number TAG (0x73d)
+   1      DW_TAG_compile_unit    [no children]
+    DW_AT_stmt_list    DW_FORM_data4
+    DW_AT_low_pc       DW_FORM_addr
+    DW_AT_high_pc      DW_FORM_addr
+    DW_AT_name         DW_FORM_strp
+    DW_AT_comp_dir     DW_FORM_strp
+    DW_AT_producer     DW_FORM_strp
+    DW_AT_language     DW_FORM_data2
+    DW_AT value: 0     DW_FORM value: 0
+
+Raw dump of debug contents of section .debug_line (loaded from main.elf):
+
+  Offset:                      0x0
+  Length:                      25
+  DWARF Version:               3
+  Prologue Length:             19
+  Minimum Instruction Length:  2
+  Initial value of 'is_stmt':  1
+  Line Base:                   -5
+  Line Range:                  14
+  Opcode Base:                 13
+
+ Opcodes:
+  Opcode 1 has 0 args
+  Opcode 2 has 1 arg
+  Opcode 3 has 1 arg
+  Opcode 4 has 1 arg
+  Opcode 5 has 1 arg
+  Opcode 6 has 0 args
+  Opcode 7 has 0 args
+  Opcode 8 has 0 args
+  Opcode 9 has 1 arg
+  Opcode 10 has 0 args
+  Opcode 11 has 0 args
+  Opcode 12 has 1 arg
+
+ The Directory Table is empty.
+
+ The File Name Table is empty.
+
+ No Line Number Statements.
+  Offset:                      0x1d
+  Length:                      93
+  DWARF Version:               3
+  Prologue Length:             64
+  Minimum Instruction Length:  2
+  Initial value of 'is_stmt':  1
+  Line Base:                   -5
+  Line Range:                  14
+  Opcode Base:                 13
+
+ Opcodes:
+  Opcode 1 has 0 args
+  Opcode 2 has 1 arg
+  Opcode 3 has 1 arg
+  Opcode 4 has 1 arg
+  Opcode 5 has 1 arg
+  Opcode 6 has 0 args
+  Opcode 7 has 0 args
+  Opcode 8 has 0 args
+  Opcode 9 has 1 arg
+  Opcode 10 has 0 args
+  Opcode 11 has 0 args
+  Opcode 12 has 1 arg
+
+ The Directory Table (offset 0x38):
+  1	../../../../libgcc/config/avr
+
+ The File Name Table (offset 0x57):
+  Entry	Dir	Time	Size	Name
+  1	1	0	0	lib1funcs.S
+
+ Line Number Statements:
+  [0x00000067]  Extended opcode 2: set Address to 0x102
+  [0x0000006e]  Advance Line by 2277 to 2278
+  [0x00000071]  Copy
+  [0x00000072]  Advance Line by 2 to 2280
+  [0x00000074]  Advance PC by fixed size amount 2 to 0x104
+  [0x00000077]  Copy (view 1)
+  [0x00000078]  Advance PC by fixed size amount 2 to 0x106
+  [0x0000007b]  Extended opcode 1: End of Sequence
+
+
+  Offset:                      0x7e
+  Length:                      159
+  DWARF Version:               3
+  Prologue Length:             64
+  Minimum Instruction Length:  2
+  Initial value of 'is_stmt':  1
+  Line Base:                   -5
+  Line Range:                  14
+  Opcode Base:                 13
+
+ Opcodes:
+  Opcode 1 has 0 args
+  Opcode 2 has 1 arg
+  Opcode 3 has 1 arg
+  Opcode 4 has 1 arg
+  Opcode 5 has 1 arg
+  Opcode 6 has 0 args
+  Opcode 7 has 0 args
+  Opcode 8 has 0 args
+  Opcode 9 has 1 arg
+  Opcode 10 has 0 args
+  Opcode 11 has 0 args
+  Opcode 12 has 1 arg
+
+ The Directory Table (offset 0x99):
+  1	../../../../libgcc/config/avr
+
+ The File Name Table (offset 0xb8):
+  Entry	Dir	Time	Size	Name
+  1	1	0	0	lib1funcs.S
+
+ Line Number Statements:
+  [0x000000c8]  Extended opcode 2: set Address to 0x98
+  [0x000000cf]  Advance Line by 2372 to 2373
+  [0x000000d2]  Copy
+  [0x000000d3]  Advance Line by 1 to 2374
+  [0x000000d5]  Advance PC by fixed size amount 2 to 0x9a
+  [0x000000d8]  Copy (view 1)
+  [0x000000d9]  Advance Line by 1 to 2375
+  [0x000000db]  Advance PC by fixed size amount 2 to 0x9c
+  [0x000000de]  Copy (view 2)
+  [0x000000df]  Advance Line by 1 to 2376
+  [0x000000e1]  Advance PC by fixed size amount 2 to 0x9e
+  [0x000000e4]  Copy (view 3)
+  [0x000000e5]  Advance Line by 1 to 2377
+  [0x000000e7]  Advance PC by fixed size amount 2 to 0xa0
+  [0x000000ea]  Copy (view 4)
+  [0x000000eb]  Advance Line by 1 to 2378
+  [0x000000ed]  Advance PC by fixed size amount 2 to 0xa2
+  [0x000000f0]  Copy (view 5)
+  [0x000000f1]  Advance Line by 1 to 2379
+  [0x000000f3]  Advance PC by fixed size amount 2 to 0xa4
+  [0x000000f6]  Copy (view 6)
+  [0x000000f7]  Advance Line by 1 to 2380
+  [0x000000f9]  Advance PC by fixed size amount 2 to 0xa6
+  [0x000000fc]  Copy (view 7)
+  [0x000000fd]  Advance Line by 2 to 2382
+  [0x000000ff]  Advance PC by fixed size amount 2 to 0xa8
+  [0x00000102]  Copy (view 8)
+  [0x00000103]  Advance Line by 1 to 2383
+  [0x00000105]  Advance PC by fixed size amount 2 to 0xaa
+  [0x00000108]  Copy (view 9)
+  [0x00000109]  Advance Line by 2 to 2385
+  [0x0000010b]  Advance PC by fixed size amount 2 to 0xac
+  [0x0000010e]  Copy (view 10)
+  [0x0000010f]  Advance Line by 1 to 2386
+  [0x00000111]  Advance PC by fixed size amount 2 to 0xae
+  [0x00000114]  Copy (view 11)
+  [0x00000115]  Advance Line by 1 to 2387
+  [0x00000117]  Advance PC by fixed size amount 2 to 0xb0
+  [0x0000011a]  Copy (view 12)
+  [0x0000011b]  Advance PC by fixed size amount 2 to 0xb2
+  [0x0000011e]  Extended opcode 1: End of Sequence
+
+
+Contents of the .debug_str section (loaded from main.elf):
+
+  0x00000000 6176722d 6c696263 20322e30 2e300075 avr-libc 2.0.0.u
+  0x00000010 696e7438 5f740075 696e7431 365f7400 int8_t.uint16_t.
+  0x00000020 5f5f6565 70726f6d 00414443 53524200 __eeprom.ADCSRB.
+  0x00000030 41435352 00444944 52310055 44523000 ACSR.DIDR1.UDR0.
+  0x00000040 55435352 30410055 43535230 42005543 UCSR0A.UCSR0B.UC
+  0x00000050 53523043 00554252 52300050 4f525441 SR0C.UBRR0.PORTA
+  0x00000060 00444452 41005049 4e410050 4f525442 .DDRA.PINA.PORTB
+  0x00000070 00444452 42005049 4e420050 4f525443 .DDRB.PINB.PORTC
+  0x00000080 00444452 43005049 4e430050 4f525444 .DDRC.PINC.PORTD
+  0x00000090 00444452 44005049 4e44004f 43523042 .DDRD.PIND.OCR0B
+  0x000000a0 004f4352 30410054 434e5430 00544343 .OCR0A.TCNT0.TCC
+  0x000000b0 52304200 54434352 30410054 494d534b R0B.TCCR0A.TIMSK
+  0x000000c0 30005449 46523000 47544343 52005449 0.TIFR0.GTCCR.TI
+  0x000000d0 4d534b31 00544946 52310054 43435231 MSK1.TIFR1.TCCR1
+  0x000000e0 41005443 43523142 00544343 52314300 A.TCCR1B.TCCR1C.
+  0x000000f0 54434e54 31004f43 52314100 4f435231 TCNT1.OCR1A.OCR1
+  0x00000100 42004943 52310054 494d534b 32005449 B.ICR1.TIMSK2.TI
+  0x00000110 46523200 54434352 32410054 43435232 FR2.TCCR2A.TCCR2
+  0x00000120 42005443 4e543200 4f435232 42004f43 B.TCNT2.OCR2B.OC
+  0x00000130 52324100 41535352 00475443 43520054 R2A.ASSR.GTCCR.T
+  0x00000140 494d534b 33005449 46523300 54434352 IMSK3.TIFR3.TCCR
+  0x00000150 33410054 43435233 42005443 43523343 3A.TCCR3B.TCCR3C
+  0x00000160 0054434e 5433004f 43523341 004f4352 .TCNT3.OCR3A.OCR
+  0x00000170 33420049 43523300 53504d43 53520045 3B.ICR3.SPMCSR.E
+  0x00000180 49435241 0045494d 534b0045 49465200 ICRA.EIMSK.EIFR.
+  0x00000190 50434d53 4b330050 434d534b 32005043 PCMSK3.PCMSK2.PC
+  0x000001a0 4d534b31 0050434d 534b3000 50434946 MSK1.PCMSK0.PCIF
+  0x000001b0 52005043 49435200 41444d55 58004144 R.PCICR.ADMUX.AD
+  0x000001c0 43004144 43535241 00414443 53524200 C.ADCSRA.ADCSRB.
+  0x000001d0 44494452 30004f43 4452004d 43554352 DIDR0.OCDR.MCUCR
+  0x000001e0 004d4355 53520045 45415200 45454452 .MCUSR.EEAR.EEDR
+  0x000001f0 00454543 52005457 414d5200 54574252 .EECR.TWAMR.TWBR
+  0x00000200 00545743 52005457 53520054 57445200 .TWCR.TWSR.TWDR.
+  0x00000210 54574152 00554452 31005543 53523141 TWAR.UDR1.UCSR1A
+  0x00000220 00554353 52314200 55435352 31430055 .UCSR1B.UCSR1C.U
+  0x00000230 42525231 00535044 52005350 53520053 BRR1.SPDR.SPSR.S
+  0x00000240 50435200 57445443 53520053 52454700 PCR.WDTCSR.SREG.
+  0x00000250 5350004d 43554352 004d4355 5352004f SP.MCUCR.MCUSR.O
+  0x00000260 53434341 4c00434c 4b505200 534d4352 SCCAL.CLKPR.SMCR
+  0x00000270 0052414d 505a0047 50494f52 32004750 .RAMPZ.GPIOR2.GP
+  0x00000280 494f5231 00475049 4f523000 50525230 IOR1.GPIOR0.PRR0
+  0x00000290 00505252 31002e2e 2f2e2e2f 2e2e2f2e .PRR1.../../../.
+  0x000002a0 2e2f6c69 62676363 2f636f6e 6669672f ./libgcc/config/
+  0x000002b0 6176722f 6c696231 66756e63 732e5300 avr/lib1funcs.S.
+  0x000002c0 2f707269 76617465 2f746d70 2f617672 /private/tmp/avr
+  0x000002d0 2d676363 41392d32 30323230 3131322d -gccA9-20220112-
+  0x000002e0 39313131 312d316a 79616470 632f6763 91111-1jyadpc/gc
+  0x000002f0 632d392e 332e302f 6275696c 642f6176 c-9.3.0/build/av
+  0x00000300 722f6176 7235312f 6c696267 63630047 r/avr51/libgcc.G
+  0x00000310 4e552041 5320322e 33362e31 00       NU AS 2.36.1.
+

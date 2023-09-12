@@ -6,8 +6,8 @@
 const uint8_t K_FLAG_BUFFER_EMPTY = 0b00000001;
 const uint8_t K_FLAG_BUFFER_FULL = 0b00000010;
 const uint8_t K_FLAG_READ_LAST = 0b00000100;
-const uint8_t K_FLAG_MODIFIER_KEY = 0b00001000;
-const uint8_t K_FLAG_SHIFT_KEY = 0b00010000;
+const uint8_t K_FLAG_RESERVED3 = 0b00001000;
+const uint8_t K_FLAG_RESERVED4 = 0b00010000;
 const uint8_t K_FLAG_RESERVED5 = 0b00100000;
 const uint8_t K_FLAG_RESERVED6 = 0b01000000;
 const uint8_t K_FLAG_RESERVED7 = 0b10000000;
@@ -23,22 +23,17 @@ void keyboard_setup(void) {
 // Private calls
 
 static inline char __read_keyboard_scan(void) {
-  char active_char = '\0';
-  UNSET_FLAG(K_FLAG_MODIFIER_KEY | K_FLAG_SHIFT_KEY, keyboard_status); 
   // Scan each line of the keyboard
   for (uint8_t i = 0; i < 6; ++i) {
     // Output a 1 on each line
     PORTA = 1 << i;
     if (PORTC) {
       // Grab input
-      char k = keyboard_char_table[PORTC + i * 8];
-      // TODO: Check flags
-      // if modifier key, set flag
-      active_char = k;
+      // TODO: This is wrong
+      return keyboard_char_table[PORTC + i * 8];
     }
   }
-  // TODO: Check modifier flags
-  return active_char;
+  return 0;
 }
 
 static inline uint8_t __kputc(char c) {
@@ -88,14 +83,11 @@ void keyboard_wait_for_line(char *buffer, uint8_t size) {
   uint8_t index = 0;
   do {
     key_pressed = kgetc();
-    // TODO: add video ram direct memory access here???
-    // 2023-03-06 Hmm this was meant as print to screen?
     if (key_pressed == '\b' && index > 0) {
       buffer[index--] = '\0';
-    } else if (key_pressed != '\0' && index < 0xFF) {
+    } else if (key_pressed != '\0') {
       buffer[index++] = key_pressed;
     }
-    // TODO add interrupt flag?
   } while (key_pressed != '\n' && index < size - 1);
 
   // Terminate string

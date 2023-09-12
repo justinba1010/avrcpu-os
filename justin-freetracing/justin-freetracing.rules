@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 8)
+    (start_pass_no 3)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -27,8 +27,9 @@
   )
   (rule
     (width 250.0)
-    (clear 300.0)
+    (clear 200.0)
     (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd-smd))
   )
   (padstack "Via[0-1]_800:400_um"
     (shape
@@ -40,22 +41,22 @@
     (attach off)
   )
   (via 
-    "Via[0-1]_800:400_um-PWR" "Via[0-1]_800:400_um" PWR
-  )
-  (via 
     "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
   )
   (via 
     "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
   )
-  (via_rule
-    PWR "Via[0-1]_800:400_um-PWR"
+  (via 
+    "Via[0-1]_800:400_um-PWR" "Via[0-1]_800:400_um" PWR
   )
   (via_rule
     default "Via[0-1]_800:400_um"
   )
   (via_rule
     "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    PWR "Via[0-1]_800:400_um-PWR"
   )
   (class default
     /KC0 "Net-(D1-Pad2)" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "Net-(D4-Pad2)" "Net-(D5-Pad2)" "Net-(D6-Pad2)" /KC1
@@ -68,7 +69,8 @@
     /PB2 /PB3 "Net-(C1-Pad2)" /MOSI /KR0 /MISO "Net-(C2-Pad2)" /~RESET
     /KC2 /KC4 /PB4 /PB7 /PA7 /PA6 /KR5 /KR4
     /KR3 /KR2 /KR1 "unconnected-(J5-Pad2)" "Net-(D49-Pad1)" "Net-(D50-Pad1)" "Net-(C3-Pad1)" /PD0
-    /PD1 /PD2 /PD3 /PD4 /PD5 /PD6 /PD7
+    /PD1 /PD2 /PD3 /PD4 /PD5 /PD6 /PD7 "Net-(K49-Pad1)"
+    "Net-(SW1-Pad2)"
     (clearance_class default)
     (via_rule default)
     (rule

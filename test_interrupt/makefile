@@ -5,7 +5,7 @@ CC = avr-gcc
 CFLAGS = -I. -mmcu=$(MCUNAME) $(OPTIMIZATION) -Wall -std=gnu99 -Wno-main -Wno-unused-variable
 ASSEMBLY =
 
-SRCS = keyboard_driver.c screen_buffer_driver.c lights_driver.c tictactoe.c
+SRCS =
 OBJECTS = $(SRCS:.c=.o)
 
 .PHONY: clean all burn
